@@ -12,6 +12,7 @@
 		CAB1852D1EE1998600ADC1E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB1852B1EE1998600ADC1E6 /* Main.storyboard */; };
 		CAB1852F1EE1998600ADC1E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB1852E1EE1998600ADC1E6 /* Assets.xcassets */; };
 		CAB185321EE1998600ADC1E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB185301EE1998600ADC1E6 /* LaunchScreen.storyboard */; };
+		CAB1853A1EE19C4A00ADC1E6 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = CAB185391EE19C4A00ADC1E6 /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CAB1852E1EE1998600ADC1E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB185311EE1998600ADC1E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB185331EE1998600ADC1E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB185391EE19C4A00ADC1E6 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				CAB185291EE1998600ADC1E6 /* ViewController.swift */,
 				CAB1852B1EE1998600ADC1E6 /* Main.storyboard */,
 				CAB1852E1EE1998600ADC1E6 /* Assets.xcassets */,
+				CAB185391EE19C4A00ADC1E6 /* pokemon.csv */,
 				CAB185301EE1998600ADC1E6 /* LaunchScreen.storyboard */,
 				CAB185331EE1998600ADC1E6 /* Info.plist */,
 			);
@@ -126,6 +129,7 @@
 			files = (
 				CAB185321EE1998600ADC1E6 /* LaunchScreen.storyboard in Resources */,
 				CAB1852F1EE1998600ADC1E6 /* Assets.xcassets in Resources */,
+				CAB1853A1EE19C4A00ADC1E6 /* pokemon.csv in Resources */,
 				CAB1852D1EE1998600ADC1E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
