@@ -47,14 +47,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Had-Wa-jJL">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="Had-Wa-jJL" customClass="PokeCell" customModule="Pokedex3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="JC4-Uo-g5k">
+                                                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="JC4-Uo-g5k">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                                     <color key="backgroundColor" white="0.95714304179999998" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -79,6 +79,10 @@
                                             <constraint firstItem="HzO-Jh-rxb" firstAttribute="leading" secondItem="Had-Wa-jJL" secondAttribute="leading" id="pSx-ix-5Lg"/>
                                             <constraint firstItem="HzO-Jh-rxb" firstAttribute="top" secondItem="JC4-Uo-g5k" secondAttribute="bottom" id="tRl-45-3Kw"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="HzO-Jh-rxb" id="HGS-ge-iDn"/>
+                                            <outlet property="thumbImg" destination="JC4-Uo-g5k" id="lCn-WX-IOj"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
