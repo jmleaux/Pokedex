@@ -12,26 +12,52 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var collection: UICollectionView!
     
+    var pokemon = [Pokemon]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let charmander = Pokemon(name: "charmander", pokedexId: 4)
         
         collection.dataSource = self
         collection.delegate = self
         
+        parsePokemonCSV()
         
     }
 
+    func parsePokemonCSV() {
+        let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")
+        do {
+            let csv = try CSV(contentsOfURL: path!)
+            let rows = csv.rows
+//            print(rows)
+            
+            for row in rows {
+                let pokeId = Int(row["id"]!)!
+                let name = row["identifier"]!
+                
+                let poke = Pokemon(name: name, pokedexId: pokeId)
+                pokemon.append(poke)
+
+            }
+            
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
 //        dequeueReusableCell is used to avoid loading every Pokemon item at once; this loads only enough to fill the collection on the screen
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
-            let pokemon = Pokemon(name: "Pokemon", pokedexId: indexPath.row + 1)
-                // "+ 1" above because there is no pokemon with id=0
-            cell.configureCell(pokemon: pokemon)
+//            let pokemon = Pokemon(name: "Pokemon", pokedexId: indexPath.row + 1)
+            // "+ 1" above because there is no pokemon with id=0
+
+            let poke = pokemon[indexPath.row]
+            cell.configureCell(poke)
             return cell
         } else {
             return UICollectionViewCell()
@@ -47,7 +73,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
 //    code below sets number of items in section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        
+        return pokemon.count
     }
     
     
