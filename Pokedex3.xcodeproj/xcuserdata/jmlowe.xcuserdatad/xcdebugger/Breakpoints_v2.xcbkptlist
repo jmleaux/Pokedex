@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "configureCell(pokemon:)"
+            landmarkName = "configureCell(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
