@@ -30,11 +30,14 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nameLbl.text = pokemon.name
+        nameLbl.text = pokemon.name.capitalized
+        
+        let image = UIImage.init(named: "\(pokemon.pokedexId)")
+        mainImg.image = image
+        currentEvoImg.image = image
+        pokedexLbl.text = "\(pokemon.pokedexId)"
         
         pokemon.downloadPokemonDetail() {
-
-//            print("Did arrive in PokemonDetailVC.swift!")
             
             // whatever we write here will happen only when network call is complete!
             
@@ -49,6 +52,7 @@ class PokemonDetailVC: UIViewController {
         heightLbl.text = pokemon.height
         weightLbl.text = pokemon.weight
         pokedexLbl.text = "\(pokemon.pokedexId)"
+        typeLbl.text = pokemon.type
         
     }
     
